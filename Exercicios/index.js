@@ -58,9 +58,20 @@ function addRemoveCass(){
     if(parag.classList.contains('newClass')==='true'){
         parag.removeAttribute('class')
         console.log('Removi o class')
-    } else{
-        parag.setAttribute('class','newClass')
-        console.log('Adicionei o class')
     }
     })
 }
+function addAtributo(){
+    const attr = document.getElementById('addAttr');
+    
+    if(attr.hasAttribute('href')){
+        attr.removeAttribute('href');
+    } else {
+        const add = document.createAttribute('href');
+        add.value = 'https://github.com/';
+        attr.setAttributeNode(add);
+    }
+}
+
+// }
+// function removeAtributo(){

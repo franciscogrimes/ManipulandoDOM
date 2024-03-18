@@ -1,14 +1,52 @@
+const btn = document.getElementById('btn')
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+});
+
+
+
 function addTarefa(){
-    const id = document.getElementById('list-ctn');
-    const ul = document.createElement('ul');
-    id.appendChild(ul);
-
-    const li = document.createElement('li');
-    li.textContent = index;
+    const list = document.getElementById('list-ctn')
     
-    ul.appendChild(li);
-}
+    const valueLI = document.getElementById('atv-txt').value
+    const ul = document.createElement('ul')
+    const li = document.createElement('li')
 
-document.addEventListener('DOMContentLoaded', function() {
-    const botao = document.getElementById('addTarefa'); 
-    botao.addEventListener('click', addTarefa);})
+    list.appendChild(ul)
+    ul.appendChild(li)
+    li.textContent = valueLI
+
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.value = valueLI;
+
+    // Adiciona o elemento de input ao elemento li
+    li.insertBefore(input, li.firstChild);
+
+    if(li === checked){
+        ul.removeChild(li.value)
+    }
+
+}
+// function addTarefa(){
+//     const valueLI = document.getElementById('atv-txt').value
+//     const ul = document.createElement('ul')
+//     const li = document.createElement('li')
+
+//     list.appendChild(ul)
+//     ul.appendChild(li)
+//     li.textContent = valueLI
+
+//     const input = document.createAttribute('input')
+//     input.type = 'radio'
+//     input.value = valueLI
+// }
+
+// function addTarefa(){
+//     const ul = document.createElement('ul')
+//     const li = document.createElement('li')
+
+//     list.appendChild(ul)
+//     ul.appendChild(li)
+//     li.textContent = valueLI
+// }
