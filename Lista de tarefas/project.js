@@ -12,10 +12,12 @@ function addTarefa(){
     const ul = document.createElement('ul')
     const li = document.createElement('li')
 
+    // Adiciona todos os elemento a uma lista 
     list.appendChild(ul)
     ul.appendChild(li)
     li.textContent = valueLI
 
+    // Adiciona um input na página do tipo checkbox
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.value = valueLI;
@@ -23,9 +25,15 @@ function addTarefa(){
     // Adiciona o elemento de input ao elemento li
     li.insertBefore(input, li.firstChild);
 
-    if(li === checked){
-        ul.removeChild(li.value)
-    }
+    // Evenque será feito pelo usuário
+    input.addEventListener('change', function() {
+
+        // Verifica se o input está marcado
+        if (input.checked) {
+            // Remove o elemento <li> da lista
+            ul.removeChild(li);
+        }
+    });
 
 }
 // function addTarefa(){
