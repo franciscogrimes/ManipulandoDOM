@@ -26,6 +26,13 @@
 .content-p{
     padding: 10px;
 }
+.content-form{
+    display: flex;
+    gap: 5px;
+}
+.content-form > input{
+    width: 15px;
+}
 li {
     width: 27vw;
     padding: 8px;
