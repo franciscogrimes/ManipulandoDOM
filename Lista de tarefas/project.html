@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./project.js" defer></script>
+    <link rel="stylesheet" href="./project.css">
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class="content">
        <h1>Lista de tarefas</h1>
+       <div class="content-p">
         <p>Olá, seja bem vindo à nossa lista de tarefas dinâmica</p>
-        <br>
         <p>Insira abaixo as atividades que você deseja executar:</p>
-       <form>
-        <input id="atv-txt" type="text" placeholder="Insira sua atividade">
-        <button id="btn" onclick="addTarefa()">Adiconar tarefas</button>
-       </form>
-       <div id="list-ctn"></div>
+        </div>
+        <div class="content-form">
+        <form>
+            <input id="atv-txt" type="text" placeholder="Insira sua atividade">
+        </form>
+        <button id="btn" onclick="addTarefa()">+</button>
+        </div>
+        <div>
+        <ul id="list-container">
 
+        </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
